@@ -30,7 +30,6 @@
 .kg-gallery-container {
     display: flex;
     flex-direction: column;
-    max-width: 1040px;
 }
 
 .kg-gallery-row {
@@ -59,6 +58,18 @@
 .kg-image-card.kg-width-wide + .kg-gallery-card,
 .kg-image-card.kg-width-wide + .kg-image-card.kg-width-wide {
     margin: -2.25em 0 3em;
+}
+
+.kg-width-wide {
+    margin: auto calc(50% - 50vw - 0.8rem);
+    width: calc(65vw + 2px);
+    min-width: calc(100% + 18rem);
+    transform: translateX(calc(50vw - 50% + 0.8rem));
+}
+
+.kg-width-full {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
 }
 
 /* keep existing <pre> styles for code cards with captions */
@@ -173,4 +184,9 @@
     line-height: 1.5em;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+.kg-card figcaption {
+    font-style: italic;
+    margin: 8px;
 }
