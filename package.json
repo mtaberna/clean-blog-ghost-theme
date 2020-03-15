@@ -44,20 +44,17 @@
     "bugs": "https://github.com/TryGhost/Starter/issues",
     "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",
     "devDependencies": {
-        "autoprefixer": "9.7.3",
-        "cssnano": "4.1.10",
+        "beeper": "^2.0.0",
         "gscan": "3.3.3",
         "gulp": "4.0.2",
-        "gulp-livereload": "4.0.1",
-        "gulp-postcss": "8.0.0",
+        "gulp-less": "^4.0.1",
+        "gulp-livereload": "4.0.2",
         "gulp-sourcemaps": "2.6.5",
         "gulp-uglify": "3.0.2",
-        "gulp-util": "3.0.8",
         "gulp-watch": "5.0.1",
-        "gulp-zip": "5.0.0",
-        "postcss-color-function": "4.1.0",
-        "postcss-custom-properties": "9.1.1",
-        "postcss-easy-import": "3.0.0"
+        "gulp-zip": "5.0.1",
+        "less-plugin-autoprefix": "^2.0.0",
+        "less-plugin-clean-css": "^1.5.1"
     },
     "browserslist": [
         "defaults"
@@ -72,7 +69,7 @@
                 "width": 100
             },
             "s": {
-                "width": 300
+                "width": 350
             },
             "m": {
                 "width": 600
@@ -85,9 +82,5 @@
             }
         }
     },
-    "dependencies": {
-        "gulp-less": "^4.0.1",
-        "less-plugin-autoprefix": "^2.0.0",
-        "less-plugin-clean-css": "^1.5.1"
-    }
+    "dependencies": {}
 }

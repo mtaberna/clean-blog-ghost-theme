@@ -65,51 +65,53 @@
 </main>
 
 <!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
-                    <li>
-                        <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {{#if @site.twitter}}
-                    <li>
-                        <a href="{{twitter_url @site.twitter}}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {{/if}}
-                    {{#if @site.facebook}}
-                    <li>
-                        <a href="{{facebook_url @site.facebook}}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {{/if}}
-                </ul>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        {{#if @site.twitter}}
+                        <li>
+                            <a href="{{twitter_url @site.twitter}}">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        {{/if}}
+                        {{#if @site.facebook}}
+                        <li>
+                            <a href="{{facebook_url @site.facebook}}">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        {{/if}}
+                    </ul>
 
-                <p class="copyright text-muted">Copyright &copy; {{@site.title}} {{date format="YYYY"}}</p>
-                <div class="heart">
-                    <span class="text-muted"> 
-                    Made with <i class="fa fa-heart pulse"></i> in <a href="https://goo.gl/maps/PYTEFo6dpos" target="_blank">Madrid </a>
-                    </span>
+                    <p class="copyright text-muted">Copyright &copy; {{@site.title}} {{date format="YYYY"}}</p>
+                    <div class="heart">
+                        <span class="text-muted"> 
+                        Made with <i class="fa fa-heart pulse"></i> in <a href="https://goo.gl/maps/PYTEFo6dpos" target="_blank">Madrid </a>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
+    {{ghost_foot}}
+</body>
 <!-- Bootstrap Core JavaScript -->
 <script src="{{asset "built/bootstrap.min.js"}}"></script>
 <!-- Custom Theme JavaScript -->
