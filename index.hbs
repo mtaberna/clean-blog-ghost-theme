@@ -1,0 +1,34 @@
+{{!< default}}
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('{{@site.cover_image}}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>{{@blog.title}}</h1>
+                    <hr class="small">
+                    <span class="subheading">{{@blog.description}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        {{#foreach posts}}
+
+            {{> "card"}} {{!-- partials/card.hbs --}}
+
+        {{/foreach}}
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<!-- Previous/next page links - displayed on every page -->
+{{pagination}}

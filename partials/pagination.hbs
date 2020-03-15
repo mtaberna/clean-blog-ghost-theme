@@ -1,0 +1,14 @@
+<!-- pager -->
+<ul class="pager">
+    {{#if prev}}
+    <li class="previous">
+        <a href="{{url}}">&larr; Más recientes</a>
+    </li>
+    {{/if}}
+    <span class="page-number">Página {{page}} de {{pages}}</span>
+    {{#if next}}
+    <li class="next">
+        <a href="{{url}}">Más antiguas &rarr;</a>
+    </li>
+    {{/if}}
+</ul>

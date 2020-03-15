@@ -1,0 +1,35 @@
+{{!< default}}
+
+{{#post}}
+
+<!-- Page Header -->
+<header class="intro-header" {{#if feature_image}}style="background-image: url('{{feature_image}}')" {{/if}}>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>{{title}}</h1>
+                    <hr class="small">
+                    {{#if custom_excerpt}}
+                    <span class="subheading">{{custom_excerpt}}</span>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<article class="{{post_class}}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                {{content}}
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr>
+{{/post}}

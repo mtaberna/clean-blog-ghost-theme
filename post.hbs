@@ -1,0 +1,67 @@
+{{!< default}}
+
+{{#post}}
+
+<!-- Post Header -->
+<header class="intro-header" {{#if feature_image}}style="background-image: url('{{feature_image}}')" {{/if}}>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>{{title}}</h1>
+                    {{#if custom_excerpt}}
+                    <h2 class="subheading">{{custom_excerpt}}</h2>
+                    {{/if}}
+                    <span class="meta">Escrito por {{#foreach authors}}<a href="{{url}}">{{name}}</a>{{/foreach}} {{date published_at timeago="true"}}</span>
+                    <div class="right-float"><span class="eta">{{reading_time}}</span> <i class="fa fa-clock-o" aria-hidden="true"></i></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<article class="{{post_class}}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+                <div class="post-content">
+                    {{content}}
+                </div>
+
+                <hr>
+
+                <!-- commento -->
+                <h2> Comentarios </h2>
+                <div id="commento"></div>
+                <script src="https://cdn.commento.io/js/commento.js"></script>
+
+
+                <!-- pager -->
+                <ul class="pager">
+                    {{#prev_post}}
+                    <li class="previous">
+                        <a href="{{url}}" data-toggle="tooltip" data-placement="top" title="{{title}}">&larr; Entrada anterior</a>
+                    </li>
+                    {{/prev_post}}
+                    {{#next_post}}
+                    <li class="next">
+                        <a href="{{url}}" data-toggle="tooltip" data-placement="top" title="{{title}}">Siguiente entrada &rarr;</a>
+                    </li>
+                    {{/next_post}}
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr>
+
+<a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+<script src="{{asset "built/snakke.min.js"}}"></script>
+
+{{/post}}

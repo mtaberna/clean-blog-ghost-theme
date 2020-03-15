@@ -1,0 +1,15 @@
+{{!--
+Re-usable card for linking to posts
+--}}
+
+<div class="post-preview {{post_class}}">
+    <a href="{{url}}">
+        <h2 class="post-title">{{title}}</h2>
+        <h3 class="post-subtitle">
+            {{excerpt}}
+        </h3>
+    </a>
+    <p class="post-meta">Escrito por {{#foreach authors}}<a href="{{url}}">{{name}}</a>{{/foreach}} {{date published_at timeago="true"}}</p>
+
+</div>
+<hr>
