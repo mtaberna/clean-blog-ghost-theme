@@ -27,12 +27,18 @@ p {
     }
 }
 
-article a {
-    color: @gray-dark;
+article {
+    a {
+        color: @gray-dark;
 
-    &:hover,
-    &:focus {
-        color: @brand-primary;
+        &:hover,
+        &:focus {
+            color: @brand-primary;
+        }
+    }
+
+    .post-tags span:hover {
+        background-color: @brand-primary;
     }
 }
 

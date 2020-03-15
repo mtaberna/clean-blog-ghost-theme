@@ -31,6 +31,13 @@
                 <div class="post-content">
                     {{content}}
                 </div>
+                <div class="post-tags">
+                    <p>
+                    {{#foreach tags}}
+                    <a href="{{url}}"><span class="label label-default">#{{name}}</span></a>
+                    {{/foreach}}
+                    </p>
+                </div>
             </div>
         </div>
     </div>
