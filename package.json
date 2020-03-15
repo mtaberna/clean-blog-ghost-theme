@@ -18,6 +18,7 @@
         "test:ci": "gscan --fatal --verbose .",
         "pretest": "gulp build",
         "preship": "yarn test",
+        "lint:style": "stylelint --config config/stylelint.config.js  --syntax less \"assets/less/**/*.less\"",
         "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi"
     },
     "author": {
@@ -44,6 +45,8 @@
     "bugs": "https://github.com/TryGhost/Starter/issues",
     "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",
     "devDependencies": {
+        "@commitlint/cli": "^8.3.5",
+        "@commitlint/config-conventional": "^8.3.4",
         "beeper": "^2.0.0",
         "gscan": "3.3.3",
         "gulp": "4.0.2",
@@ -53,8 +56,11 @@
         "gulp-uglify": "3.0.2",
         "gulp-watch": "5.0.1",
         "gulp-zip": "5.0.1",
+        "husky": "^4.2.3",
         "less-plugin-autoprefix": "^2.0.0",
-        "less-plugin-clean-css": "^1.5.1"
+        "less-plugin-clean-css": "^1.5.1",
+        "stylelint": "^13.2.1",
+        "stylelint-config-standard": "^20.0.0"
     },
     "browserslist": [
         "defaults"
@@ -82,5 +88,10 @@
             }
         }
     },
-    "dependencies": {}
+    "dependencies": {},
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint --config config/commitlint.config.js -E HUSKY_GIT_PARAMS"
+        }
+    }
 }

@@ -3,18 +3,31 @@
 
 body {
     .serif;
+
     font-size: 20px;
     color: @gray-dark;
 }
 
 // -- Typography
+
+article a {
+    color: @gray-dark;
+
+    &:hover,
+    &:focus {
+        color: @brand-primary;
+    }
+}
+
 p {
     line-height: 1.5;
     margin: 30px 0;
+
     a {
         text-decoration: none;
         border-bottom: 2px solid @brand-primary;
     }
+
     a:hover {
         color: @brand-primary;
         text-decoration: none;
@@ -28,19 +41,11 @@ h4,
 h5,
 h6 {
     .sans-serif;
+
     font-weight: 800;
 }
 
-
-article a {
-    color: @gray-dark;
-    &:hover,
-    &:focus {
-        color: @brand-primary;
-    }
-}
-
-/*a img {
+/* a img {
     &:hover,
     &:focus {
         cursor: zoom-in;
@@ -50,7 +55,8 @@ article a {
 blockquote {
     color: @gray;
     font-style: italic;
-    border-left:  5px solid @brand-primary;
+    border-left: 5px solid @brand-primary;
+
     p {
         margin: 0;
     }
@@ -72,9 +78,11 @@ hr.small {
     width: 100%;
     z-index: 3;
     .serif;
+
     .navbar-brand {
         font-weight: 600;
     }
+
     .nav {
         li {
             a {
@@ -85,22 +93,27 @@ hr.small {
             }
         }
     }
+
     @media only screen and (min-width: 768px) {
         background: transparent;
         border-bottom: 1px solid transparent;
+
         .navbar-brand {
             color: white;
             padding: 20px 20px 15px 20px;
+
             &:hover,
             &:focus {
                 color: @white-faded;
             }
         }
+
         .nav {
             li {
                 a {
                     color: white;
                     padding: 20px 20px 15px 10px;
+
                     &:hover,
                     &:focus {
                         color: @white-faded;
@@ -109,10 +122,12 @@ hr.small {
             }
         }
     }
+
     @media only screen and (min-width: 1170px) {
         -webkit-transition: background-color 0.3s;
         -moz-transition: background-color 0.3s;
         transition: background-color 0.3s;
+
         /* Force Hardware Acceleration in WebKit */
         -webkit-transform: translate3d(0, 0, 0);
         -moz-transform: translate3d(0, 0, 0);
@@ -121,6 +136,7 @@ hr.small {
         transform: translate3d(0, 0, 0);
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
+
         &.is-fixed {
             /* when the user scrolls down, we hide the header right above the viewport */
             position: fixed;
@@ -130,17 +146,21 @@ hr.small {
             -webkit-transition: -webkit-transform 0.3s;
             -moz-transition: -moz-transform 0.3s;
             transition: transform 0.3s;
+
             .navbar-brand {
                 color: @gray-dark;
+
                 &:hover,
                 &:focus {
                     color: @brand-primary;
                 }
             }
+
             .nav {
                 li {
                     a {
                         color: @gray-dark;
+
                         &:hover,
                         &:focus {
                             color: @brand-primary;
@@ -149,6 +169,7 @@ hr.small {
                 }
             }
         }
+
         &.is-visible {
             /* if the user changes the scrolling direction, we show the header */
             -webkit-transform: translate3d(0, 100%, 0);
@@ -168,64 +189,80 @@ hr.small {
     .background-cover;
     // NOTE: Background images are set within the HTML using inline CSS!
     margin-bottom: 15px;
+
     .site-heading,
     .post-heading,
     .page-heading {
         padding: 100px 0 50px;
         color: white;
+
         @media only screen and (min-width: 768px) {
             padding: 150px 0;
         }
     }
+
     .site-heading,
     .page-heading {
         text-align: center;
+
         h1 {
             margin-top: 0;
             font-size: 50px;
         }
+
         .subheading {
             font-size: 24px;
             line-height: 1.1;
             display: block;
             .sans-serif;
+
             font-weight: 300;
             margin: 10px 0 0;
         }
+
         @media only screen and (min-width: 768px) {
             h1 {
                 font-size: 80px;
             }
         }
     }
+
     .post-heading {
         h1 {
             font-size: 35px;
         }
+
         .subheading,
         .meta {
             line-height: 1.1;
             display: block;
         }
+
         .subheading {
             .serif;
+
             font-size: 24px;
             margin: 10px 0 30px;
             font-weight: 300;
         }
+
         .meta {
             .serif;
+
             font-style: italic;
             font-weight: 300;
             font-size: 20px;
+
             a {
                 color: white;
             }
         }
+
         @media only screen and (min-width: 768px) {
             h1 {
                 font-size: 55px;
             }
+
             .subheading {
                 font-size: 30px;
             }
@@ -237,33 +274,40 @@ hr.small {
 .post-preview {
     > a {
         color: @gray-dark;
+
         &:hover,
         &:focus {
-            text-decoration: none;            
+            text-decoration: none;
         }
+
         &:hover .post-title,
         &:focus .post-title {
-            color:  @brand-primary;
+            color: @brand-primary;
         }
+
         > .post-title {
             font-size: 30px;
             margin-top: 30px;
             margin-bottom: 10px;
         }
+
         > .post-subtitle {
             margin: 0;
             font-weight: 200;
             margin-bottom: 10px;
         }
     }
+
     > .post-meta {
         color: @gray;
         font-size: 18px;
         font-style: italic;
         margin-top: 0;
+
         > a {
             text-decoration: none;
             color: @gray-dark;
+
             &:hover,
             &:focus {
                 color: @brand-primary;
@@ -271,6 +315,7 @@ hr.small {
             }
         }
     }
+
     @media only screen and (min-width: 768px) {
         > a {
             > .post-title {
@@ -300,26 +345,31 @@ hr.small {
 
 footer {
     padding: 50px 0 65px;
+
     .list-inline {
         margin: 0;
         padding: 0;
     }
+
     .heart {
         span {
             font-size: 12px;
             display: block;
             text-align: center;
         }
+
         span a {
-            color: #000000;
+            color: #000;
             text-decoration: none;
         }
+
         span .fa {
-            color: #E90606;
+            color: #e90606;
             margin: 0 3px;
             font-size: 10px;
         }
     }
+
     .copyright {
         font-size: 14px;
         text-align: center;
@@ -334,6 +384,7 @@ footer {
     margin-bottom: 0;
     padding-bottom: 0.5em;
     border-bottom: 1px solid @gray-light;
+
     input,
     textarea {
         z-index: 1;
@@ -347,6 +398,7 @@ footer {
         box-shadow: none !important;
         resize: none;
     }
+
     label {
         display: block;
         z-index: 0;
@@ -363,6 +415,7 @@ footer {
         -ms-transition: top 0.3s ease, opacity 0.3s ease;
         transition: top 0.3s ease, opacity 0.3s ease;
     }
+
     &::not(:first-child) {
         padding-left: 14px;
         border-left: 1px solid @gray-light;
@@ -389,6 +442,7 @@ form .row:first-child .floating-label-form-group {
 // Button Styles
 .btn {
     .sans-serif;
+
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 800;
@@ -414,10 +468,12 @@ form .row:first-child .floating-label-form-group {
 // Pager Styling
 .pager {
     margin: 20px 0 0;
+
     li {
         > a,
         > span {
             .sans-serif;
+
             text-transform: uppercase;
             font-size: 14px;
             font-weight: 800;
@@ -425,11 +481,13 @@ form .row:first-child .floating-label-form-group {
             padding: 10px 5px;
             background-color: white;
             border-radius: 0;
+
             @media only screen and (min-width: 768px) {
                 font-size: 14px;
                 padding: 15px 25px;
             }
         }
+
         > a:hover,
         > a:focus {
             color: white;
@@ -437,6 +495,7 @@ form .row:first-child .floating-label-form-group {
             border: 1px solid @brand-primary;
         }
     }
+
     .disabled {
         > a,
         > a:hover,
@@ -545,13 +604,13 @@ ins {
 }
 
 .snakke-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: width .3s ease;
-  height: 3px;
-  z-index: 4;
-  background: @brand-primary;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: width 0.3s ease;
+    height: 3px;
+    z-index: 4;
+    background: @brand-primary;
 }
 
 .post-footer {
@@ -563,15 +622,19 @@ ins {
             display: block;
             border-bottom-right-radius: 5px;
             border-bottom-left-radius: 5px;
+
             a {
                 color: @gray-dark;
             }
+
             a:hover {
                 text-decoration: none;
             }
+
             p {
                 margin: 10px 0;
             }
+
             .pre-caption {
                 font-style: italic;
             }
