@@ -1,6 +1,7 @@
 @import "variables.less";
 @import "mixins.less";
 
+/* stylelint-disable no-descending-specificity */
 body {
     .serif;
 
@@ -9,15 +10,6 @@ body {
 }
 
 // -- Typography
-
-article a {
-    color: @gray-dark;
-
-    &:hover,
-    &:focus {
-        color: @brand-primary;
-    }
-}
 
 p {
     line-height: 1.5;
@@ -31,6 +23,15 @@ p {
     a:hover {
         color: @brand-primary;
         text-decoration: none;
+    }
+}
+
+article a {
+    color: @gray-dark;
+
+    &:hover,
+    &:focus {
+        color: @brand-primary;
     }
 }
 
@@ -124,17 +125,8 @@ hr.small {
     }
 
     @media only screen and (min-width: 1170px) {
-        -webkit-transition: background-color 0.3s;
-        -moz-transition: background-color 0.3s;
         transition: background-color 0.3s;
-
-        /* Force Hardware Acceleration in WebKit */
-        -webkit-transform: translate3d(0, 0, 0);
-        -moz-transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-        -o-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
-        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
 
         &.is-fixed {
@@ -143,8 +135,6 @@ hr.small {
             top: -61px;
             background-color: fade(white, 90%);
             border-bottom: 1px solid darken(white, 5%);
-            -webkit-transition: -webkit-transform 0.3s;
-            -moz-transition: -moz-transform 0.3s;
             transition: transform 0.3s;
 
             .navbar-brand {
@@ -171,11 +161,6 @@ hr.small {
         }
 
         &.is-visible {
-            /* if the user changes the scrolling direction, we show the header */
-            -webkit-transform: translate3d(0, 100%, 0);
-            -moz-transform: translate3d(0, 100%, 0);
-            -ms-transform: translate3d(0, 100%, 0);
-            -o-transform: translate3d(0, 100%, 0);
             transform: translate3d(0, 100%, 0);
         }
     }
@@ -275,16 +260,6 @@ hr.small {
     > a {
         color: @gray-dark;
 
-        &:hover,
-        &:focus {
-            text-decoration: none;
-        }
-
-        &:hover .post-title,
-        &:focus .post-title {
-            color: @brand-primary;
-        }
-
         > .post-title {
             font-size: 30px;
             margin-top: 30px;
@@ -295,6 +270,16 @@ hr.small {
             margin: 0;
             font-weight: 200;
             margin-bottom: 10px;
+        }
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+
+        &:hover .post-title,
+        &:focus .post-title {
+            color: @brand-primary;
         }
     }
 
@@ -374,51 +359,6 @@ footer {
         font-size: 14px;
         text-align: center;
         margin-bottom: 0;
-    }
-}
-
-// Contact Form Styles
-.floating-label-form-group {
-    font-size: 14px;
-    position: relative;
-    margin-bottom: 0;
-    padding-bottom: 0.5em;
-    border-bottom: 1px solid @gray-light;
-
-    input,
-    textarea {
-        z-index: 1;
-        position: relative;
-        padding-right: 0;
-        padding-left: 0;
-        border: none;
-        border-radius: 0;
-        font-size: 1.5em;
-        background: none;
-        box-shadow: none !important;
-        resize: none;
-    }
-
-    label {
-        display: block;
-        z-index: 0;
-        position: relative;
-        top: 2em;
-        margin: 0;
-        font-size: 0.85em;
-        line-height: 1.764705882em;
-        vertical-align: middle;
-        vertical-align: baseline;
-        opacity: 0;
-        -webkit-transition: top 0.3s ease, opacity 0.3s ease;
-        -moz-transition: top 0.3s ease, opacity 0.3s ease;
-        -ms-transition: top 0.3s ease, opacity 0.3s ease;
-        transition: top 0.3s ease, opacity 0.3s ease;
-    }
-
-    &::not(:first-child) {
-        padding-left: 14px;
-        border-left: 1px solid @gray-light;
     }
 }
 
@@ -508,13 +448,6 @@ form .row:first-child .floating-label-form-group {
     }
 }
 
-// -- Highlight Color Customization
-::-moz-selection {
-    color: white;
-    text-shadow: none;
-    background: @brand-primary;
-}
-
 ::selection {
     color: white;
     text-shadow: none;
@@ -524,15 +457,6 @@ form .row:first-child .floating-label-form-group {
 img::selection {
     color: white;
     background: transparent;
-}
-
-img::-moz-selection {
-    color: white;
-    background: transparent;
-}
-
-body {
-    webkit-tap-highlight-color: @brand-primary;
 }
 
 .right-float {
@@ -548,20 +472,12 @@ ins {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.5);
     width: 50px;
     height: 50px;
     display: block;
     text-decoration: none;
-    -webkit-border-radius: 35px;
-    -moz-border-radius: 35px;
     border-radius: 35px;
-    display: none;
-    -webkit-transition: all 0.3s linear;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
@@ -572,10 +488,6 @@ ins {
     left: 15.5px;
     top: 10px;
     font-size: 19px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
