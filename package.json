@@ -1,12 +1,8 @@
 {
-    "name": "ghost-starter-theme",
-    "description": "A custom theme for ghost",
-    "demo": "https://starter.ghost.io",
-    "version": "1.0.0",
-    "engines": {
-        "ghost": ">=3.0.0",
-        "ghost-api": "v3"
-    },
+    "name": "mtaberna-theme-ghost",
+    "description": "Manuel Taberna custom theme for ghost, based on Clean Blog by Start Bootstrap - https://mtaberna.com",
+    "demo": "https://mtaberna.com",
+    "version": "0.4.0",
     "license": "MIT",
     "screenshots": {
         "desktop": "assets/screenshot-desktop.jpg"
@@ -22,15 +18,16 @@
         "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi"
     },
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "Manuel Taberna",
+        "email": "mtaberna@pm.me",
+        "url": "https://mtaberna.com"
     },
     "gpm": {
         "type": "theme",
         "categories": [
             "Minimal",
-            "Magazine"
+            "Personal Blog",
+            "Bootstrap 3"
         ]
     },
     "keywords": [
@@ -40,10 +37,10 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/TryGhost/Starter.git"
+        "url": "https://github.com/BeatPlus/mtaberna-ghost-theme.git"
     },
-    "bugs": "https://github.com/TryGhost/Starter/issues",
-    "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",
+    "bugs": "https://github.com/BeatPlus/mtaberna-ghost-theme/issuess",
+    "contributors": "https://github.com/BeatPlus/mtaberna-ghost-theme/graphs/contributors",
     "devDependencies": {
         "@commitlint/cli": "^8.3.5",
         "@commitlint/config-conventional": "^8.3.4",
