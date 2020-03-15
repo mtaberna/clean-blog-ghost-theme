@@ -40,16 +40,9 @@
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-            <!-- commento -->
-            <h2> Comentarios </h2>
-            <div id="commento"></div>
-            <script src="https://cdn.commento.io/js/commento.js"></script>
-
-
-            <!-- pager -->
-            <h2>Más entradas</h2>
             <ul class="pager">
                 <div class="row">
+            <!-- pager -->
                     {{#prev_post}}
                         <div class="col-sm-6 col-md-6">
                             <li class="previous pagination">
@@ -57,10 +50,9 @@
                                   <div class="footer-caption">
                                     <a href="{{url}}">
                                         <p class="pre-caption">&laquo; Entrada anterior</p>
-                                        <img src="{{#if feature_image }} {{img_url feature_image size="s"}} {{/if}}" alt="{{title}}">
-                                    </a>
-                                        <a href="{{url}}"><h3>{{title}}</h3></a>
+                                        <h3>{{title}}</h3>
                                         <p>{{excerpt characters="140"}}</p>
+                                    </a>
                                     </div>
                                 </div>
                             </li>
@@ -74,10 +66,9 @@
                                   <div class="footer-caption">
                                     <a href="{{url}}">
                                         <p class="pre-caption">Entrada siguiente &raquo;</p>
-                                        <img src="{{#if feature_image }} {{img_url feature_image size="s"}} {{/if}}" alt="{{title}}">
-                                    </a>
-                                        <a href="{{url}}"><h3>{{title}}</h3></a>
+                                        <h3>{{title}}</h3>
                                         {{#if excerpt}}<p> {{excerpt}} </p> {{/if}}
+                                    </a>
                                     </div>
                                 </div>
                             </li>
@@ -85,6 +76,12 @@
                     {{/next_post}}
                 </div>
             </ul>
+
+            <!-- commento -->
+            <h2> Comentarios </h2>
+            <div id="commento"></div>
+            <script src="https://cdn.commento.io/js/commento.js"></script>
+
         </div>
     </div>
 </div>
