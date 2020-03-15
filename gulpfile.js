@@ -88,7 +88,9 @@ function zipper(done) {
 
 const lessWatcher = () => watch('assets/less/**', comp_less);
 const hbsWatcher = () => watch(['*.hbs', '**/**/*.hbs', '!node_modules/**/*.hbs'], hbs);
-const watcher = parallel(lessWatcher, hbsWatcher);
+const jsWatcher = () => watch(['assets/js/*.js', '!node_modules/**/*.js'], js);
+
+const watcher = parallel(lessWatcher, hbsWatcher, jsWatcher);
 const build = series(comp_less, css, js);
 const dev = series(build, serve, watcher);
 

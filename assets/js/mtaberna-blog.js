@@ -1,6 +1,5 @@
-/*!22
- * Clean Blog v1.0.0 (http://startbootstrap.com)
- * Copyright 2015 Start Bootstrap
+/*!
+ * MTaberna JS helper
  * Licensed under MIT (https://spdx.org/licenses/MIT)
  */
 
@@ -17,11 +16,6 @@ $(function() {
         e.preventDefault();
         $(this).tab("show");
     });
-});
-
-// make all images responsive
-$(function() {
-	$("img").addClass("img-responsive");
 });
 
 // responsive tables
