@@ -1,5 +1,5 @@
 {
-    "name": "mtaberna-theme-ghost",
+    "name": "clean-blog-ghost-theme",
     "description": "Manuel Taberna custom theme for ghost, based on Clean Blog by Start Bootstrap - https://mtaberna.com",
     "demo": "https://mtaberna.com",
     "version": "0.4.2",
@@ -37,10 +37,10 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/BeatPlus/mtaberna-ghost-theme.git"
+        "url": "https://github.com/BeatPlus/clean-blog-ghost-theme.git"
     },
-    "bugs": "https://github.com/BeatPlus/mtaberna-ghost-theme/issuess",
-    "contributors": "https://github.com/BeatPlus/mtaberna-ghost-theme/graphs/contributors",
+    "bugs": "https://github.com/BeatPlus/clean-blog-ghost-theme/issuess",
+    "contributors": "https://github.com/BeatPlus/clean-blog-ghost-theme/graphs/contributors",
     "devDependencies": {
         "@commitlint/cli": "^8.3.5",
         "@commitlint/config-conventional": "^8.3.4",
