@@ -2,7 +2,7 @@
     "name": "clean-blog-ghost-theme",
     "description": "Manuel Taberna custom theme for ghost, based on Clean Blog by Start Bootstrap - https://mtaberna.com",
     "demo": "https://mtaberna.com",
-    "version": "0.4.3",
+    "version": "0.4.4",
     "license": "MIT",
     "screenshots": {
         "desktop": "assets/screenshot-desktop.jpg"
