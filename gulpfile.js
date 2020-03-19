@@ -45,28 +45,28 @@ function comp_less(done) {
     ];
 
     pump([
-        src('assets/less/*.less', {sourcemaps: true}),
+        src('assets/less/main.less', {sourcemaps: true}),
         less({
             plugins: processors
         }),
-        dest('assets/built/', {sourcemaps: '.'}),
+        dest('assets/built/', {sourcemaps: true}),
         livereload()
-    ], handleError(done));
-}
-
-function css(done) {
-    pump([
-        src('assets/css/*.css'),
-        dest('assets/built/'),
     ], handleError(done));
 }
 
 function js(done) {
     pump([
-        src('assets/js/*.js', '!assets/js/*.min.js', {sourcemaps: true}),
+        src('assets/js/**/!(*.min).js', {sourcemaps: true}),
         uglify(),
         dest('assets/built/', {sourcemaps: '.'}),
         livereload()
+    ], handleError(done));
+}
+
+function CopyMinAssets(done) {
+    pump([
+        src('assets/*/*.min.*'),
+        dest('assets/built/vendor/'),
     ], handleError(done));
 }
 
@@ -91,7 +91,7 @@ const hbsWatcher = () => watch(['*.hbs', '**/**/*.hbs', '!node_modules/**/*.hbs'
 const jsWatcher = () => watch(['assets/js/*.js', '!node_modules/**/*.js'], js);
 
 const watcher = parallel(lessWatcher, hbsWatcher, jsWatcher);
-const build = series(comp_less, css, js);
+const build = series(comp_less, CopyMinAssets, js);
 const dev = series(build, serve, watcher);
 
 exports.build = build;
