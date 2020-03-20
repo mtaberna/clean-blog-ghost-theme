@@ -1,35 +1,41 @@
 {{!< default}}
 
-<div class="gh-page">
-    <div class="gh-container">
+{{#tag}}
+<!-- Tags Header -->
+<header class="intro-header" {{#if feature_image}}style="background-image: url('{{feature_image}}')"{{else}}style="background-color:#292929;"{{/if}}>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>{{name}}</h1>
+                    <hr class="small">
+                    <span class="subheading">
+                        {{#if description}}
+                            {{description}}
+                        {{else}}
+                            Un total de {{plural ../pagination.total empty='artículos' singular='% artículo' plural='% artículos'}}
+                        {{/if}}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{{/tag}}
 
-        {{#tag}}
-        <header class="gh-page-head">
-
-            <h1>{{name}}</h1>
-
-            <p>
-                {{#if description}}
-                    {{description}}
-                {{else}}
-                    A collection of {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}
-                {{/if}}
-            </p>
-
-            {{#if feature_image}}
-                <img class="gh-page-image" src="{{feature_image}}" alt="{{name}}" />
-            {{/if}}
-
-        </header>
-        {{/tag}}
-
-        <div class="gh-postfeed">
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         {{#foreach posts}}
 
             {{> "card"}} {{!-- partials/card.hbs --}}
 
         {{/foreach}}
         </div>
-
     </div>
 </div>
+
+<!-- Previous/next page links - displayed on every page -->
+{{pagination}}
+
