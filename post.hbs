@@ -14,7 +14,7 @@
                     <h2 class="subheading">{{custom_excerpt}}</h2>
                     {{/if}}
                     <span class="meta">Escrito por {{#foreach authors}}<a href="{{url}}">{{name}}</a>{{/foreach}} {{date published_at timeago="true"}}</span>
-                    <div class="right-float"><span class="eta">{{reading_time minute=(t "Lectura de 1 min.") minutes=(t "Lectura de % mins.")}}</span> <i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                    <div class="right-float"><span class="eta"><i class="fa fa-clock-o" aria-hidden="true"></i> {{reading_time minute=(t "Lectura de 1 min.") minutes=(t "Lectura de % mins.")}}</span></div>
 
                 </div>
             </div>
