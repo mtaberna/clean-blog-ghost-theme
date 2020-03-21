@@ -1,14 +1,14 @@
-# Ghost Starter Theme
+# Clean Blog Ghost theme
 
-A starter framework for Ghost themes! Fork this repository and start your development here with all the main things you need to develop a custom Ghost theme.
+A ghost theme based on [Clean Blog](https://github.com/BlackrockDigital/startbootstrap-clean-blog) by StartBootstrap. The theme has been adapted to Ghost and customized for my [personal website](https://mtaberna.com)
 
-&nbsp;
+# Preview
 
-# First time using a Ghost theme?
+[![Clean Blog Preview](https://raw.githubusercontent.com/BeatPlus/clean-blog-ghost-theme/master/static/screenshot.png)](https://raw.githubusercontent.com/BeatPlus/clean-blog-ghost-theme/master/static/screenshot.png)
 
-Ghost uses a simple templating language called [Handlebars](http://handlebarsjs.com/) for its themes.
+**[View Live Preview](https://mtaberna.com)**
 
-We've documented our default theme pretty heavily so that it should be fairly easy to work out what's going on just by reading the code and the comments. Once you feel comfortable with how everything works, we also have full [theme API documentation](https://themes.ghost.org) which explains every possible Handlebars helper and template.
+# File structure
 
 **The main files are:**
 
@@ -18,17 +18,13 @@ We've documented our default theme pretty heavily so that it should be fairly ea
 - `page.hbs` - Used for individual pages
 - `tag.hbs` - Used for tag archives
 - `author.hbs` - Used for author archives
-
-One neat trick is that you can also create custom one-off templates just by adding the slug of a page to a template file. For example:
-
-- `page-about.hbs` - Custom template for the `/about/` page
-- `tag-news.hbs` - Custom template for `/tag/news/` archive
-- `author-ali.hbs` - Custom template for `/author/ali/` archive
-
+- `assets\less` - Less style files
+- `assets\js` - Javascript files
+- `assets\builtp` - Gulp bundled files
 
 # Development
 
-Styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
+Styles and Javascripts are compiled using Gulp. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
 
 ```bash
 # Install
@@ -38,7 +34,7 @@ yarn
 $ yarn dev
 ```
 
-Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
+Now you can edit `/assets/css/` and `/assets/js/` files, which will be compiled to `/assets/built/` automatically. Files with *.min.* in the filename will be copied unprocessed.
 
 The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which you can then upload to your site.
 
@@ -46,13 +42,14 @@ The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which
 yarn zip
 ```
 
-# PostCSS Features Used
+# Gulp Features Used
 
 - Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
+- Uglify - To minify CSS and JS 
 - Variables - Simple pure CSS variables
-- [Color Function](https://github.com/postcss/postcss-color-function)
+
 
 
 # Copyright & License
 
-Copyright (c) 2013-2020 Ghost Foundation - Released under the [MIT license](LICENSE).
+Copyright (c) Manuel Taberna - Released under the [MIT license](LICENSE).
