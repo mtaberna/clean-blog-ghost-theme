@@ -4,21 +4,20 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="row">
                 <ul class="pager">
-
-                {{#if prev}}
                     <div class="col-xs-6 col-sm-4 col-md-4">
+                    {{#if prev}}
                         <li class="previous pagination">
                             <p><a href="{{page_url prev}}"> &larr;Más recientes</a></p>
                         </li>
+                    {{/if}}
                     </div>
-                {{/if}}
-                {{#if next}}
                     <div class="col-xs-6 col-sm-4 col-md-4 col-md-offset-4 col-sm-offset-4">
+                    {{#if next}}
                         <li class="next pagination">
                             <p><a href="{{page_url next}}">Más antiguas &rarr;</a></p>
                         </li>
+                    {{/if}}
                     </div>
-                {{/if}}
                 </ul>
             </div>
         </div>
