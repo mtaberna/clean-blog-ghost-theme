@@ -42,6 +42,19 @@ The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which
 yarn zip
 ```
 
+# Deployment
+
+The `main` branch has pre-configured deployment with Github actions. 💡 The action expects that you already have a working Ghost install running at least v2.25.5.
+
+1. Fork this project
+
+2. Generate a set of Ghost Admin API credentials, by configuring a new Custom Integration in Ghost Admin&raquo;Integrations. 
+
+3. On GitHub, navigate to your theme repository&raquo;Settings&raquo;Secrets. Create a secret called `GHOST_ADMIN_API_URL` containing the API URL and another called `GHOST_ADMIN_API_KEY` containing the Admin API Key. Both must be copied exactly from Ghost Admin&raquo;Integrations.
+
+4. Every commit will now be automatically deployed to your ghost site. 
+
+
 # Gulp Features Used
 
 - Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
